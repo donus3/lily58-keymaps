@@ -18,22 +18,23 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      * ,-----------------------------------------.                    ,-----------------------------------------.
      * | ESC  |   1  |   2  |   3  |   4  |   5  |                    |   6  |   7  |   8  |   9  |   0  |  =   |
      * |------+------+------+------+------+------|                    |------+------+------+------+------+------|
-     * | Tab  | sft Q| ctl W| alt E|gui R |   T  |                    |   Y  | gui U| alt I| ctl O| sft P|  -   |
+     * | Tab  |   Q  |  W   |  E   |   R  |   T  |                    |   Y  |   U  |   I  |   O  |   P  |  -   |
      * |------+------+------+------+------+------|                    |------+------+------+------+------+------|
-     * |LShift|   A  |   S  |   D  |   F  |   G  |-------.    ,-------|   H  |   J  |   K  |   L  |   ;  |  '   |
+     * |LShift|lsft A|lctl S|lalt D|lgui F|   G  |-------.    ,-------|   H  |rgui J|ralt K|rctl L|rsft ;|  '   |
      * |------+------+------+------+------+------|   [   |    |    ]  |------+------+------+------+------+------|
      * |LCTRL |   Z  |   X  |   C  |   V  |   B  |-------|    |-------|   N  |   M  |   ,  |   .  |   /  |RShift|
      * `-----------------------------------------/       /     \      \-----------------------------------------'
-     *                   | LAlt | LGUI | Tab  | / Layer1/       \Layer2\  |Backsp|RAISE | RGUI |
-     *                   |      |      |      |/ Space /         \Enter \ |      |      |      |
+     *                   |      |      | L1   | / L3    /       \L4    \  |   L2  |      |      |
+     *                   |      |      |      |/ Space /         \Enter \ | Backsp|      |      |
      *                   `----------------------------'           '------''--------------------'
      */
     [_QWERTY] = LAYOUT( \
-    KC_ESC, KC_1, KC_2, KC_3, KC_4, KC_5,                           KC_6, KC_7, KC_8, KC_9, KC_0, KC_EQL, \
-    KC_TAB, KC_Q, KC_W, KC_E, KC_R, KC_T,                           KC_Y, KC_U, KC_I, KC_O, KC_P, KC_MINS, \
+    KC_ESC,  KC_1, KC_2, KC_3, KC_4, KC_5,                           KC_6, KC_7, KC_8, KC_9, KC_0, KC_EQL, \
+    KC_TAB,  KC_Q, KC_W, KC_E, KC_R, KC_T,                           KC_Y, KC_U, KC_I, KC_O, KC_P, KC_MINS, \
     KC_LCTL, LSFT_T(KC_A), LCTL_T(KC_S), LALT_T(KC_D), LGUI_T(KC_F), KC_G, KC_H, RGUI_T(KC_J), RALT_T(KC_K), RCTL_T(KC_L), RSFT_T( KC_SCLN), KC_QUOT, \
     KC_LSFT, KC_Z, KC_X, KC_C, KC_V, KC_B,     KC_LBRC,   KC_RBRC,  KC_N, KC_M, KC_COMM, KC_DOT, KC_SLSH, KC_RSFT, \
                     KC_LALT, KC_LGUI, KC_TAB, LT(1, KC_SPC),        LT(2, KC_ENT), KC_BSPC, MO(2), KC_LCTL),
+                    KC_TRNS, KC_TRNS, MO(1), LT(3,KC_SPC),          KC_ENT, LT(2,KC_BSPC), KC_TRNS, KC_TRNS),
     /* LOWER
      * ,-----------------------------------------.                    ,-----------------------------------------.
      * |      |      |      |      |      |      |                    |      |      |      |      |      |      |
